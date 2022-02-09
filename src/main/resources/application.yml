@@ -1,0 +1,24 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: author-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: admin123
+    url: jdbc:postgresql://localhost:5432/author
+    
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+      
+  jackson:
+    default-property-inclusion: NON_NULL
+    serialization: 
+      fail-on-empty-beans: false
